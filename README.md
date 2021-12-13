@@ -1,6 +1,6 @@
 # Dummy User App (Angular application)
 
-## Development server
+## Installing the code
 
 The following are detailed instructions for installing the code
 1. Ensure you have node installed.
