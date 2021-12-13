@@ -1,0 +1,14 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div><a class="navbar-brand" routerLink="http://www.google.com">Home</a></div>
+        <ul class="navbar-nav">
+            <li><a *ngIf="hdauth.isUserAuth()" class="nav-link" routerLink="/intro/awesome">Intro</a></li>
+            <li><a *ngIf="hdauth.isUserAuth()" class="nav-link" routerLink="/dummies">Dummies</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hdauth.isUserAuth()" class="nav-link" routerLink="/adminlogin">Login</a></li>
+            <li><a *ngIf="hdauth.isUserAuth()" class="nav-link" routerLink="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+</header>

@@ -1,0 +1,21 @@
+<h1>Intro Page</h1>
+<div class="container">
+Hi {{ username }}
+List of <a routerLink="/dummies">Dummies</a>
+</div>
+<div class="container">
+    Click here to get message from Spring.. 
+    <button (click)="getMsgFromSpring()" class="btn btn-success">Get Message</button>
+</div>
+<div class="container">
+    Click here to get message from Spring.. with User
+    <button (click)="getMsgFromSpringWithUser()" class="btn btn-success">Get Message</button>
+</div>
+<div class="container" *ngIf="springdummytest">
+    <h2>Message is : </h2>
+    {{springdummytest}}
+</div>
+<div class="container" *ngIf="springdummyerror">
+    <h2>Error is : </h2>
+    {{springdummyerror}}
+</div>

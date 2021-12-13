@@ -1,0 +1,32 @@
+<h1>Dummy User</h1>
+
+<div class="container">
+    <div class="alert alert-warning" *ngIf="dummyForm.dirty && dummyForm.invalid">Enter valid data</div>
+    <div class="alert alert-warning" *ngIf="dummyForm.dirty && firstName.invalid">Enter First Name</div>
+    <div class="alert alert-warning" *ngIf="dummyForm.dirty && lastName.invalid">Enter Last Name</div>
+    <div class="alert alert-warning" *ngIf="dummyForm.dirty && email.invalid">Enter Email</div>
+
+    <form (ngSubmit)="!dummyForm.invalid && saveDummy()" #dummyForm="ngForm">
+        <fieldset class="form-group">
+            <label>First Name</label>
+            <input type="text" 
+                #firstName="ngModel" 
+                [(ngModel)]="dummy.firstName" class="form-control" name="firstName" required="required"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Last Name</label>
+            <input type="text" 
+                #lastName="ngModel"
+                [(ngModel)]="dummy.lastName" class="form-control" name="lastName" required="required"/>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Email</label>
+            <input type="text" #email="ngModel"
+            [(ngModel)]="dummy.emailId" class="form-control" name="emailId" required="required"/>
+        </fieldset>
+
+        <button type="submit" class="btn btn-success" (click)="saveDummy()">Save</button>
+    </form>
+
+</div>
